@@ -1,0 +1,339 @@
+:root {
+  --velvet: #4B1E1E;
+  --wine: #6E2C2C;
+  --gold: #D4AF37;
+  --burn-gold: #B9972C;
+  --ivory: #FAF8F5;
+  --rose: #C9B8B8;
+}
+
+/* Algemene layout */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--velvet);
+  color: var(--ivory);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(75, 30, 30, 0.95);
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--ivory);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: radial-gradient(circle, rgba(212,175,55,0.2), transparent);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--rose);
+}
+
+/* Buttons */
+.btn {
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn.gold {
+  background: var(--gold);
+  color: var(--velvet);
+}
+
+.btn.gold:hover {
+  background: var(--burn-gold);
+}
+
+.btn.outline {
+  border: 1px solid var(--ivory);
+  color: var(--ivory);
+}
+
+.btn.outline:hover {
+  background: var(--ivory);
+  color: var(--velvet);
+}
+
+/* Product secties */
+.products {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 2rem;
+  color: var(--gold);
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--wine);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 220px;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid var(--gold);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: var(--gold);
+}
+
+.card .price {
+  font-weight: bold;
+  color: var(--ivory);
+}
+
+.card .description {
+  font-size: 0.9rem;
+  color: var(--rose);
+}
+
+/* About */
+.about {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--velvet);
+}
+
+.about h2 {
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+/* Contact form */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background: var(--velvet);
+  color: var(--ivory);
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+form button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--gold);
+  color: var(--velvet);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: var(--burn-gold);
+}
+
+/* Ontwerptool preview */
+#engraving {
+  padding: 0.7rem;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background: var(--velvet);
+  color: var(--ivory);
+  width: 250px;
+}
+
+#engraving:focus {
+  border-color: var(--gold);
+}
+
+#preview {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--velvet);
+  border-top: 1px solid var(--gold);
+  font-size: 0.9rem;
+  color: var(--rose);
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Checkout form */
+.checkout-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: left;
+  background: var(--wine);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.checkout-form h3 {
+  color: var(--gold);
+  margin-top: 1.5rem;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="number"] {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background: var(--velvet);
+  color: var(--ivory);
+}
+
+.checkout-form input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.checkout-form button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--gold);
+  color: var(--velvet);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.checkout-form button:hover {
+  background: var(--burn-gold);
+}
+
+/* Product grids */
+.top-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product {
+  text-align: center;
+  border: 1px solid var(--gold);
+  padding: 15px;
+  border-radius: 8px;
+  background: var(--wine);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--gold);
+  margin: 10px 0;
+}
+
+.order-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: var(--gold);
+  color: var(--velvet);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.order-btn:hover {
+  background-color: var(--burn-gold);
+}
+
+/* Payment icons */
+.payment-grid img {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
